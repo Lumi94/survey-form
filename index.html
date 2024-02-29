@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+          <h1 id="title" class="text-center">Customer Satisfaction Survey Form</h1>
+          <p id="description" class="description text-center">
+            Thank you for taking the time to help us improve our service
+          </p>
+        </header>
+
+        <form id="survey-form">      
+          <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required/>
+          </div>
+          <div class="form-group" >
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required/>
+          </div>
+
+          <div class="form-group">
+            <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+            <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age"/>
+          </div>
+        
+          <div class="form-group">
+            <p>How long have you been a customer of our company?</p>
+            <select id="most-like" name="mostLike" class="form-control" required>
+              <option disabled selected value>Select an option</option>
+              <option value="challenges">This is my first purchase</option>
+              <option value="projects">Less than six months</option>
+              <option value="community">Six months to a year</option>
+              <option value="openSource">1-2 years</option>
+              <option value="openSource">3 ore more years</option>
+              <option value="openSource">I haven't made a purchase yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <p>How satisfied or dissatisfied are you with our company?</p>
+          <label><input name="prefer" value="very-satisfied" type="radio" class="input-radio"/>Very satisfied</label>
+          <label><input name="prefer" value="somewhat-satisfied" type="radio" class="input-radio"/>Somewhat satisfied</label>
+          <label><input name="prefer" value="very-dissatisfied" type="radio" class="input-radio"/>Very dissatisfied</label>
+          <label><input name="prefer" value="somewhat-dissatisfied" type="radio" class="input-radio"/>Somewhat dissatisfied</label>
+        </div>
+          
+        <div class="form-group">
+            <p>Would you recommend our company to a friend?</p>
+            <label><input name="user-recommend" value="definitely" type="radio" class="input-radio" checked/>Definitely</label>
+            <label><input name="user-recommend" value="maybe" type="radio" class="input-radio"/>Maybe</label>
+            <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio"/>Not sure</label></div>
+      
+          <div class="form-group">
+            <p>Which of the following words would you use to describe our products.<span class="clue">(Select all that apply) </span></p>
+            <label><input name="words" value="reliable" type="checkbox" class="input-checkbox" />Reliable</label>
+            <label><input name="words" value="high-quality" type="checkbox" class="input-checkbox" />High quality</label>
+            <label><input name="words" value="useful" type="checkbox" class="input-checkbox" />Useful</label>
+            <label><input name="words" value="unique" type="checkbox" class="input-checkbox" />Unique</label>
+            <label><input name="words" value="good-value-for-money" type="checkbox" class="input-checkbox" />Good value fo money</label>
+            <label><input name="words" value="overpriced" type="checkbox" class="input-checkbox" />Overpriced</label>
+            <label><input name="words" value="impractical" type="checkbox" class="input-checkbox" />Impractical</label>
+            <label><input name="words" value="ineffective" type="checkbox" class="input-checkbox" />Ineffective</label>
+            <label><input name="words" value="poor-quality" type="checkbox" class="input-checkbox" />Poor Quality</label>
+            <label><input name="words" value="unreliable" type="checkbox" class="input-checkbox" />Unreliable</label>
+          </div>
+      
+          <div class="form-group">
+            <p>Do you have any other comments, questions, or concerns?</p>
+            <textarea id="comments" class="input-textarea" name="comment"placeholder="Enter your comment here..."></textarea>
+          </div>
+      
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      
